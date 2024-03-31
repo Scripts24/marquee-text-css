@@ -1,7 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 
-*{
-    padding: 0;
-    margin: 0;
+* {
+    padding   : 0;
+    margin    : 0;
     box-sizing: border-box;
+}
+
+body {
+    height    : 100vh;
+    background: #313131;
+    overflow  : hidden;
+}
+
+.wrapp-marquee {
+    position : relative;
+    display  : block;
+    width    : 750px;
+    height   : 140px;
+    top      : 50%;
+    left     : 50%;
+    transform: translate(-50%, -50%);
+    overflow : hidden;
+}
+
+.marquee {
+    position   : absolute;
+    display    : block;
+    margin     : auto auto;
+    white-space: nowrap;
+    overflow   : hidden;
+    min-width  : 100%;
+    height     : 100%;
+}
+
+.marquee span {
+    display            : inline-block;
+    padding-left       : 100%;
+    font-family        : "Ubuntu", sans-serif;
+    font-weight        : 500;
+    text-align         : center;
+    -webkit-text-stroke: 2px #5131c7;
+    white-space        : nowrap;
+    min-width          : 100%;
+    height             : 100%;
+    line-height        : 140px;
+    font-size          : 85px;
+    animation          : marquee 12s linear infinite;
+}
+
+.marquee2 span {
+    animation-delay: 6s;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0);
+    }
 }
